@@ -15,3 +15,9 @@ const desconto = (valorPorHora, numeroDiasTrabalho, desconto) => {
 }
 
 desconto(80, 120, 0.5)
+
+function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
+    return prisonerIsAwake && !archerIsAwake;
+  }
+
+// if reduzido
