@@ -31,9 +31,7 @@ function PublishForm(form, url) {
       let response = await fetch(url);
   
       if (response.status == 502) {
-        // Connection timeout
-        // happens when the connection was pending for too long
-        // let's reconnect
+        //conect e reconect
         await subscribe();
       } else if (response.status != 200) {
         // Ver erro
@@ -52,4 +50,3 @@ function PublishForm(form, url) {
     subscribe();
   
   }
-  
