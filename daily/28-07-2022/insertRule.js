@@ -1,6 +1,7 @@
 let  sheet = (function() { 	
     // crie uma <style> tag 	
-    let style = document.createElement('style'); 	
+    const style = document.createElement('style'); 
+    const jose = document.querySelector()	
     // Adicione uma midia (e/ou media query) aqui se vc gostar! 	
     // style.setAttribute('media', 'screen') 	
     // style.setAttribute('media', 'apenas screen and (max-width : 1024px)') 	
