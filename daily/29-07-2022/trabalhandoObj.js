@@ -25,7 +25,7 @@ const debouce = (handler) => {
   clearTimeout(time);
   time = setTimeout(() => {
     handler;
-  }, 200);
+  }, 2000);
 };
 
 const creatTable = (data) => {
@@ -56,23 +56,24 @@ creatTable(data);
 inputName.addEventListener("change", (e) => debouce(lookForStudent(e)));
 const lookForStudent = (e) => {
   const nameStudent = e.target.value.toUpperCase();
-  console.log(nameStudent);
-  const filter = data.filter((item) => {
-    item.name.toUpperCase().includes(nameStudent);
+  
+  const f = data.filter((item) => {
+   return item.name.toUpperCase().includes(nameStudent); 
   });
-
+  // quando o elemento e passado dentro da funcao ({um novo escopo da função}) necessita de return
   delet();
-
-  creatTable(filter);
-  //farai a funcao ser chamada covamente, seria prejudicial, pq so encrementaria mais cards, acredito q a maneira mais facil seria clonar a tabela e mandar
+  creatTable(f);
 };
 
 const delet = () => {
-  let itemsdelet = document.querySelectorAll("card");
-
-  itemsdelet.map((item) => {
+  let itemsdelet = document.querySelectorAll(".card");
+  console.log(itemsdelet)
+  itemsdelet.forEach(item => {
     item.remove();
   });
-  // provavelente apagar todos os elementos filhos seja ruim, pode ser q eu apague so o numero q resta e deixar o numero de obj e mudar seu innerHTML
-  //fazendo a mao assim se torna mais complicado, vc tem alguma dica de como atualizar de maneira mais dinamica,
+    
+  // provavelente apagar todos os elementos filhos seja ruim, pode ser q eu apague so o numero de elementos que restam e mudar o innerHTML dos elementos que seria usados, 
+  // o texto acima foi testado, ruim pq todos os elementos foram atualizados de qualquer forma.  
+  // teste 1: flitrar e recolocar elementos, pesquisar por que lookForStudent so funciona quando click ou quando aperto enter
+
 };
