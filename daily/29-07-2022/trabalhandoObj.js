@@ -74,6 +74,4 @@ const delet = () => {
     
   // provavelente apagar todos os elementos filhos seja ruim, pode ser q eu apague so o numero de elementos que restam e mudar o innerHTML dos elementos que seria usados, 
   // o texto acima foi testado, ruim pq todos os elementos foram atualizados de qualquer forma.  
-  // teste 1: flitrar e recolocar elementos, pesquisar por que lookForStudent so funciona quando click ou quando aperto enter
-
 };
