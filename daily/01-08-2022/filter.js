@@ -13,22 +13,18 @@ const data = [
     { name: "janice", birday: 2345242, number: 97839283828 },
 ];
 
-const filtrando = (keyObj, value) => {
+const filter = (keyObj, value, data) => {
     const valueUpperCase = value.toUpperCase()
     return filter = data.filter((item) => item[keyObj].toUpperCase().includes(valueUpperCase))
 }
 
-const createObj = () => {
-    const get = filtrando()
-}
+const deleteObj = (keyObj, value, whatDelete) => {
+    const get = filter(keyObj, value, data)
 
-const deletObj = (keyObj, value, whatDelet) => {
-    const get = filtrando(keyObj, value)
-
-    if(whatDelet === "all"){
+    if(whatDelete === "all"){
         return data = []
     }
-    if(whatDelet === "oneObj"){
+    if(whatDelete === "oneObj"){
        const index = data.findIndex((item) => item[keyObj] == value)
        data.slice(index, 1)
        return data
@@ -37,9 +33,9 @@ const deletObj = (keyObj, value, whatDelet) => {
     
 }
 
-deletObj("name", "reijan", "oneObj")
+deleteObj("name", "reijan", "oneObj")
 
-const get = filtrando("name", "rei")
+const get = filter("name", "rei", data)
 console.log(data.indexOf("rei"))
 
 
