@@ -37,6 +37,6 @@ deleteObj("name", "reijan", "oneObj")
 
 const get = filter("name", "rei", data)
 console.log(data.indexOf("rei"))
-
+// sempre referencie qual dado externo vc esta utilizando
 
  
