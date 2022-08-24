@@ -1,5 +1,9 @@
 {
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "gitignore": "^0.7.0",
+>>>>>>> 96d2a0a93bd4312b38866bb844750cd8d9eaa8cd
     "prettier": "^2.7.1"
   }
 }
