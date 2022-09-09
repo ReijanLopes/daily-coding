@@ -1,0 +1,22 @@
+.star-icon{
+    list-style-type: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #ffe500;
+}
+
+.evaluation{
+    display: flex;
+}
+
+.star-icon::before{
+    content: "\2605";
+}
+
+.evaluation:hover ~ .star-icon::before{
+    content: "\2605";
+}
+
+.star-icon.active  ~ .star-icon::before{
+    content: "\2606";
+}
