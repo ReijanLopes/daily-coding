@@ -1,10 +1,28 @@
 const data = [
-  { name: "Reijan", date: "Sun Sep 18 2022 08:48:59 GMT-0300 (Brasilia Standard Time)" },
-  { name: "Douglas", date: "Sat Sep 17 2022 08:48:39 GMT-0300 (Brasilia Standard Time)" },
-  { name: "Anabily", date: "Wed Sep 21 2022 08:48:23 GMT-0300 (Brasilia Standard Time)" },
-  { name: "Fabiana", date: "Thu Sep 08 2022 08:49:20 GMT-0300 (Brasilia Standard Time)" },
-  { name: "Marcos", date: "Thu Sep 08 2022 08:49:20 GMT-0300 (Brasilia Standard Time)" },
-  { name: "Ruan", date: "Thu Sep 08 2022 08:49:20 GMT-0300 (Brasilia Standard Time)" },
+  {
+    name: "Reijan",
+    date: new Date("11-19-2015"),
+  },
+  {
+    name: "Douglas",
+    date: new Date("12-01-2015"),
+  },
+  {
+    name: "Anabily",
+    date: new Date("11-02-2015"),
+  },
+  {
+    name: "Fabiana",
+    date: new Date("11-20-2015"),
+  },
+  {
+    name: "Marcos",
+    date: new Date("11-15-2015"),
+  },
+  {
+    name: "Ruan",
+    date: new Date("11-10-2015"),
+  },
 ];
 
 const startTime = document.querySelector(".startTime");
@@ -25,10 +43,17 @@ const formatDate = (_date) => {
 endTime.value = formatDate(date);
 startTime.value = formatDate(date.setDate(date.getDate() - 7));
 
-
 const formatData = () => {
-    const dates = data.map((item) => {
-        return {name:item.name ,date: formatDate(item.date)}
-    })
-    return dates
-}
+  const dates = data.map((item) => {
+    return { name: item.name, date: formatDate(item.date) };
+  });
+  return dates;
+};
+
+const sortByDate = (a, b) => {
+  if (a.date < b.date && a.date > b.date) return 1;
+  if (a.date > b.date) return -1;
+  return 0;
+};
+
+console.log(data.sort(sortByDate));
