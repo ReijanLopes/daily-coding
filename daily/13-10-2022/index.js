@@ -2,14 +2,12 @@ const arrayNumber = [23, 65, 98, 5];
 
 Array.prototype.myFilter = function (callback) {
   // não pode ser feito com esse tipo de function () => {}
-  // Only change code below this line
   const newArray = [];
   this.map((item) => {
     if (callback(item)) {
       newArray.push(item);
     }
   });
-  // Only change code above this line
   return newArray;
 };
 
@@ -47,4 +45,3 @@ const sorted = (a, b) => {
   return a.total > b.total ? -1 : a.total < b.total ? 1 : 0;
 };
 const format = statusLength.sort(sorted);
-console.log(format);
