@@ -21,10 +21,8 @@ const correctingAString = (string, before, after) => {
       if (word === before) {
         if (isCapitalized(word)) {
           stringSplit[i] = capitalizedWord(after[index]);
-          console.log(stringSplit[i]);
         } else {
           stringSplit[i] = smallWord(after[index]);
-          console.log(stringSplit[i]);
         }
       }
     });
@@ -33,4 +31,4 @@ const correctingAString = (string, before, after) => {
   return stringSplit.join(" ");
 };
 
-console.log(correctingAString(string, before, afters));
+correctingAString(string, before, afters);
