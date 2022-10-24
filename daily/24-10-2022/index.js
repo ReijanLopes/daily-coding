@@ -19,14 +19,13 @@ const checkingPresence = () => {
 
   if (person.res) {
     callRoll.res.map((item) => {
-      // filtering persons presents
+      // filtering persons presents and add presence
       const filtered = person.res.filter((filter) => filter.id === item);
       if (filtered[0]) {
         filtered[0].callRoll = "Presence";
       }
     });
   }
-  console.log(dataPerson);
 };
 
 checkingPresence();
