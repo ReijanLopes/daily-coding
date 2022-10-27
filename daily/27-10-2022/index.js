@@ -1,3 +1,4 @@
+// testing assumptions
 const data = [
   { name: "Dogras" },
   { name: "Anabilis" },
@@ -24,3 +25,30 @@ const greaterThanTenSome = num.some((item) => item >= 10);
 // brings the answer to see if an element meets the requirement, return boolean
 const greaterThanTenEvery = num.every((item) => item >= 10);
 // brings the answer to see if an element meets the requirement, return Truthy (true / false, 0, "", null, undefined, e NaN)
+
+// testing in function
+
+const dataFunction = [1, [2], [3, [[4]]]];
+
+const steamrollArray1 = (arr) => {
+  const flat = [].concat(...arr); // Deep clone
+  return {
+    dataSteamroll: flat.some(Array.isArray) ? steamrollArray1(flat) : flat,
+  };
+};
+
+// or
+
+const steamrollArray2 = (arr) => {
+  while (isAnArray(arr)) {
+    arr = arr.flat();
+  }
+  return arr;
+};
+
+const isAnArray = (arr) => {
+  return arr.some((item) => Array.isArray(item));
+};
+// I like the last function(steamrollArray2) because of the division of tasks
+steamrollArray1(dataFunction);
+console.log(steamrollArray2(dataFunction));
