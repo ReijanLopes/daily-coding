@@ -1,6 +1,6 @@
 
 let timer = null;
-const debouce1 = (url) => {
+const debounce1 = (url) => {
 	let get
 	
 	clearTimeout(timer);
@@ -12,5 +12,5 @@ const debouce1 = (url) => {
 	}, 2000)
 }
 // uma funcao que espera um tempo ate ser ativada novamente
-debouce1("https://react-component-depot.netlify.app/leaflet/draw-on-map")
+debounce1("https://react-component-depot.netlify.app/leaflet/draw-on-map")
 // obvio que o fetch nao faz uma chamda verdadeira, o que foi testado foi a funcionalidade de espera da funcao
