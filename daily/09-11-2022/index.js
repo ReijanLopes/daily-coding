@@ -24,7 +24,6 @@ const listIds = createIds();
 
 const filtered = (e) => {
   const id = e?.target?.id ? e.target.id : e;
-  console.log(id);
   let res = undefined;
   listIds.map((obj, indexRow) => {
     obj.map((item, indexColumn) => {
@@ -52,7 +51,6 @@ const handleClick = (e) => {
     }
   };
   checkKinshipLeft(elem, indexRow, indexColumn);
-  console.log(array);
 };
 
 const createBox = () => {
@@ -64,7 +62,6 @@ const createBox = () => {
     root.appendChild(containerBox);
 
     item.map(({ randomId, randomNumber }) => {
-      console.log(randomId, randomNumber);
       const box = document.createElement("div");
       box.id = randomId;
       box.innerHTML = randomNumber;
