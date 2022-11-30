@@ -1,6 +1,15 @@
 {
   "dependencies": {
+    "express": "^4.18.2",
     "gitignore": "^0.7.0",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.7.4",
     "prettier": "^2.7.1"
-  }
+  },
+  "name": "dayli-code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ReijanLopes/daily-coding.git",
+  "author": "ReijanLopes <56601947+ReijanLopes@users.noreply.github.com>",
+  "license": "MIT"
 }
