@@ -27,7 +27,8 @@ const timeOrbitalPlanets = {
 
 const age = (planet, orbita) => {
   return (
-    (orbita / (orbitalPlanets[planet] * 365.25 * 24 * 60 * 60)).toFixed(2) * 1
+    (orbita / (timeOrbitalPlanets[planet] * 365.25 * 24 * 60 * 60)).toFixed(2) *
+    1
   );
 };
 
