@@ -10,3 +10,5 @@ function countNucleotides(strand) {
 
   return `${dna.A} ${dna.C} ${dna.G} ${dna.T}`;
 }
+
+countNucleotides("GGGGGGGGAAAAAA");
